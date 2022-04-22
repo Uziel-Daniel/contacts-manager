@@ -11,8 +11,16 @@ public class Input {
     public static String getUserName(String prompt) {
         System.out.println(prompt);
 
-        return scan.nextLine();
+        String userName = scan.nextLine();
+        testName(userName);
+        return userName;
     }
+
+
+    public static String testName(String test){
+        return test;
+    }
+
 
     /* GET DYNAMIC USER PHONE NUMBER */
     public static String getUserPhoneNumber(String prompt) {
