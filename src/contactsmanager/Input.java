@@ -4,14 +4,17 @@ import java.util.Scanner;
 
 public class Input {
 
+    /* CREATE NEW INSTANCE OF SCANNER CLASS */
     private static Scanner scan = new Scanner(System.in);
 
+    /* GET DYNAMIC USER NAME */
     public static String getUserName(String prompt) {
         System.out.println(prompt);
 
         return scan.nextLine();
     }
 
+    /* GET DYNAMIC USER PHONE NUMBER */
     public static String getUserPhoneNumber(String prompt) {
         System.out.println(prompt);
 
