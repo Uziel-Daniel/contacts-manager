@@ -9,21 +9,15 @@ public class Input {
 
     /* GET DYNAMIC USER NAME */
     public static String getUserName(String prompt) {
+
         System.out.println(prompt);
 
-        String userName = scan.nextLine();
-        testName(userName);
-        return userName;
+        return scan.nextLine();
     }
-
-
-    public static String testName(String test){
-        return test;
-    }
-
 
     /* GET DYNAMIC USER PHONE NUMBER */
     public static String getUserPhoneNumber(String prompt) {
+
         System.out.println(prompt);
 
         String phoneNumber = scan.nextLine().replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3");

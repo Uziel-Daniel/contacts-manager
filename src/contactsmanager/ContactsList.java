@@ -1,22 +1,25 @@
 package contactsmanager;
 
 import java.util.HashMap;
-import static contactsmanager.Input.testName;
 
 public class ContactsList {
 
-    static HashMap<String, String> contactsInfo = new HashMap<>();
+    /* CREATE NEW HASHMAP */
+    static HashMap<Integer, ContactObject> contactsInfo = new HashMap<>();
 
     public static void putContacts() {
 
-        /* CREATE NEW HASHMAP */
+        int counter = 0;
 
-        String testName = testName("test");
+        ContactObject contact = new ContactObject();
 
+        contact.setName(Input.getUserName("Please enter a contact name: "));
+        contact.setPhoneNumber(Input.getUserName("Please enter a contact phone number: "));
 
         /* PUT AND GET FROM HASHMAP */
-        contactsInfo.put(Input.getUserName("Please enter contact name: "), Input.getUserPhoneNumber("Please enter contact phone number: "));
+        contactsInfo.put(counter, contact);
         System.out.println(contactsInfo);
 
+        counter += 1;
     }
 }
