@@ -17,5 +17,11 @@ public class ContactsManagerApp {
             userChoice = getUserName("Do you want to keep adding any contacts? y/n");
 
         } while (userChoice.equalsIgnoreCase("Y"));
+
+
+//        call GetAllContacts to see all contacts info
+        System.out.println("see all contacts");
+        GetAllContacts getAllContacts = new GetAllContacts();
+        System.out.println(getAllContacts);
     }
 }

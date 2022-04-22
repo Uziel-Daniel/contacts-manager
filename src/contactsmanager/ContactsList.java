@@ -19,17 +19,11 @@ public class ContactsList {
         /* PUT AND GET FROM HASHMAP */
         System.out.println(contact.getName() + contact.getPhoneNumber() + " object");
         contactsInfo.put(counter, contact);
-        for (int key: contactsInfo.keySet()){
-            System.out.print(key + "    |    ");
-//            System.out.println(contactsInfo.get(key));
-
-            System.out.println(contactsInfo.get(key).getName());
-
-            System.out.println(contactsInfo.get(key).getPhoneNumber());
-
-        }
-
-
         counter += 1;
+    }
+
+    //returns the hash map with all objects so that we can use it in the GetAllContacts class
+    public static HashMap<Integer, ContactObject> getContactsInfo() {
+        return contactsInfo;
     }
 }
