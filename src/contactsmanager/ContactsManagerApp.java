@@ -22,5 +22,13 @@ public class ContactsManagerApp {
 //        call GetAllContacts to see all contacts info
         System.out.println("see all contacts");
         GetAllContacts getAllContacts = new GetAllContacts();
+
+
+
+//        print contacts object based on input search... search for specific name within the hashmap
+        System.out.println("see all contacts by name");
+        GetContactsByName getContactsByName = new GetContactsByName();
+        getContactsByName.GetContactsInfoByName();
+
     }
 }
