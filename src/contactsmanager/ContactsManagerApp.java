@@ -22,6 +22,5 @@ public class ContactsManagerApp {
 //        call GetAllContacts to see all contacts info
         System.out.println("see all contacts");
         GetAllContacts getAllContacts = new GetAllContacts();
-        System.out.println(getAllContacts);
     }
 }
