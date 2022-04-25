@@ -7,9 +7,9 @@ public class ContactsList {
     /* CREATE NEW HASHMAP */
     static HashMap<Integer, ContactObject> contactsInfo = new HashMap<>();
 
-    public static void putContacts() {
+    static int counter = 0;
 
-        int counter = 0;
+    public static void putContacts() {
 
         ContactObject contact = new ContactObject();
 
