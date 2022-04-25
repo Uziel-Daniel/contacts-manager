@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class GetContactsByName {
 
 
-    public void GetContactsInfoByName() {
+    public static void getContactsInfoByName() {
 
         //    gets the contacts object
         HashMap<Integer, ContactObject> contactsInfo = ContactsList.getContactsInfo();
