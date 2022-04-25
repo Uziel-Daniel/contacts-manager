@@ -1,5 +1,6 @@
 package contactsmanager;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class ContactsList {
@@ -7,9 +8,8 @@ public class ContactsList {
     /* CREATE NEW HASHMAP */
     static HashMap<Integer, ContactObject> contactsInfo = new HashMap<>();
 
+    static int counter = 0;
     public static void putContacts() {
-
-        int counter = 0;
 
         ContactObject contact = new ContactObject();
 
@@ -17,9 +17,13 @@ public class ContactsList {
         contact.setPhoneNumber(Input.getUserName("Please enter a contact phone number: "));
 
         /* PUT AND GET FROM HASHMAP */
+        System.out.println(contact.getName() + contact.getPhoneNumber() + " object");
         contactsInfo.put(counter, contact);
-        System.out.println(contactsInfo);
-
         counter += 1;
+    }
+
+    //returns the hash map with all objects so that we can use it in the GetAllContacts class
+    public static HashMap<Integer, ContactObject> getContactsInfo() {
+        return contactsInfo;
     }
 }
