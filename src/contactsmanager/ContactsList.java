@@ -7,7 +7,7 @@ public class ContactsList {
     /* CREATE NEW HASHMAP */
     static HashMap<Integer, ContactObject> contactsInfo = new HashMap<>();
 
-    static int counter = 0;
+
 
     public static void putContacts() {
         ContactObject contact = new ContactObject();
@@ -15,10 +15,8 @@ public class ContactsList {
         contact.setName(Input.getUserName("Please enter a contact name: "));
         contact.setPhoneNumber(Input.getUserName("Please enter a contact phone number: "));
 
-        /* PUT AND GET FROM HASHMAP */
-        System.out.println(contact.getName() + contact.getPhoneNumber() + " object");
-        contactsInfo.put(counter, contact);
-        counter += 1;
+        int maxKey = contactsInfo.keySet().stream().max(Integer::compareTo).orElse(0);
+        contactsInfo.put(maxKey + 1, contact);
     }
 
     //returns the hash map with all objects so that we can use it in the GetAllContacts class

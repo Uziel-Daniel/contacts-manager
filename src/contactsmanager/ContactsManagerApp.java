@@ -23,8 +23,9 @@ public class ContactsManagerApp {
 //        /////////////////////////////////////////  print all contacts
 //        call GetAllContacts to see all contacts info
         System.out.println("see all contacts");
-        GetAllContacts getAllContacts = new GetAllContacts();
+//        GetAllContacts getAllContacts = new GetAllContacts();
 
+        GetAllContacts.GetAllContacts();
 
 
 //        /////////////////////////////////////////// search by name /////////////////////////////////////
@@ -34,8 +35,17 @@ public class ContactsManagerApp {
         getContactsByName.GetContactsInfoByName();
 
 //        if no contact was found... we can recall the method to search again
-        System.out.println("no user was found");
-        getContactsByName.GetContactsInfoByName();
+//        System.out.println("no user was found");
+//        getContactsByName.GetContactsInfoByName();
+
+
+        EditContactInfo.editContactInfo();
+
+
+        System.out.println("see all contacts");
+        GetAllContacts.GetAllContacts();
+
+        ChoicesRunner.choices();
 
         System.out.println("Would you like to delete ");
 
