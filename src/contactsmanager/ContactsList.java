@@ -1,6 +1,5 @@
 package contactsmanager;
 
-import java.util.Arrays;
 import java.util.HashMap;
 
 public class ContactsList {
@@ -30,8 +29,6 @@ public class ContactsList {
     /* DELETE CONTACTS */
     public static void deleteContact() {
         //    gets the contacts object
-        HashMap<Integer, ContactObject> contactsInfo = ContactsList.getContactsInfo();
-
         String findContactByName = Input.getUserName("enter contact to be deleted");
 
 //        iterate over the object to find a specific name entered by the user
@@ -41,11 +38,10 @@ public class ContactsList {
 
 //        if its there... print the name and contact info
                 contactsInfo.remove(key);
+                System.out.println("Deleted Contact: " + findContactByName);
 
 //                System.out.println(contactsInfo.get(key).getName() + " found user input");
 
-//                We can't use an else statement because as the iteration is ocurring, it will go through the else statement
-//                We can exit the method, print out an statement to look again and from there decide whether or not call the method again
             }
         }
 

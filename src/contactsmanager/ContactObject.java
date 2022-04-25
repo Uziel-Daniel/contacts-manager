@@ -6,8 +6,13 @@ public class ContactObject {
     private String name;
     private String phoneNumber;
 
+    public ContactObject(String name, String phoneNumber) {
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+    }
+
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public ContactObject() {
@@ -19,15 +24,11 @@ public class ContactObject {
     }
 
     public String getPhoneNumber() {
-        return phoneNumber;
+        return this.phoneNumber;
     }
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public ContactObject(String name, String phoneNumber) {
-        this.name = name;
-        this.phoneNumber = phoneNumber;
-    }
 }
