@@ -37,9 +37,7 @@ public class ContactsList {
 //        if its there... print the name and contact info
                 contactsInfo.remove(key);
                 System.out.println("Deleted Contact: " + findContactByName);
-
-//                System.out.println(contactsInfo.get(key).getName() + " found user input");
-
+                return;
             }
         }
 
