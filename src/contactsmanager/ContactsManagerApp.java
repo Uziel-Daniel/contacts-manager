@@ -33,8 +33,16 @@ public class ContactsManagerApp {
         getContactsByName.GetContactsInfoByName();
 
 //        if no contact was found... we can recall the method to search again
-        System.out.println("no user was found");
-        getContactsByName.GetContactsInfoByName();
+//        System.out.println("no user was found");
+//        getContactsByName.GetContactsInfoByName();
+
+
+
+        EditContactInfo editContactInfo = new EditContactInfo();
+
+
+        System.out.println("see all contacts");
+        GetAllContacts getAllContacts2 = new GetAllContacts();
 
     }
 }
