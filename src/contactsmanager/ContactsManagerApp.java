@@ -44,5 +44,7 @@ public class ContactsManagerApp {
         System.out.println("see all contacts");
         GetAllContacts.GetAllContacts();
 
+        ChoicesRunner.choices();
+
     }
 }
