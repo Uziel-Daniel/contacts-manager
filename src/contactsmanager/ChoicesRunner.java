@@ -17,7 +17,7 @@ public class ChoicesRunner {
             userChoice = Integer.parseInt(Input.getUserPhoneNumber("Enter an option (1, 2, 3, 4 or 5):"));
             if (userChoice == 1) {
                 System.out.println("chooose 1");
-                GetAllContacts.GetAllContacts();
+                GetAllContacts.getAllContacts();
 
             } else if (userChoice == 2) {
                 System.out.println("choose2");
@@ -34,8 +34,7 @@ public class ChoicesRunner {
             } else if (userChoice == 3) {
                 System.out.println("choose 3");
                 System.out.println("see all contacts by name");
-                GetContactsByName getContactsByName = new GetContactsByName();
-                getContactsByName.GetContactsInfoByName();
+                GetContactsByName.getContactsInfoByName();
             } else if (userChoice == 4) {
                 System.out.println("choose 4");
                 /* DELETE DO WHILE FLAG */

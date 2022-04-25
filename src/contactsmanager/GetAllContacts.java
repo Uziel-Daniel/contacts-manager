@@ -6,7 +6,7 @@ public class GetAllContacts {
 
 
 //    prints all objects with their contact name and contact phone number
-    public static void GetAllContacts(){
+    public static void getAllContacts(){
         HashMap<Integer, ContactObject> contactsInfo = ContactsList.getContactsInfo();
 
         System.out.printf("%10s %40s %10s%n", "Name", "|", " Phone Number");
