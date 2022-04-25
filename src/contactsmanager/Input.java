@@ -24,4 +24,12 @@ public class Input {
 
         return phoneNumber;
     }
+
+    /* GET DYNAMIC USER NAME */
+    public static String getUserChoice(String prompt) {
+
+        System.out.println(prompt);
+
+        return scan.nextLine();
+    }
 }

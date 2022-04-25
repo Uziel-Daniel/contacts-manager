@@ -1,5 +1,6 @@
 package contactsmanager;
 
+import static contactsmanager.Input.getUserChoice;
 import static contactsmanager.Input.getUserName;
 
 public class ContactsManagerApp {
@@ -45,6 +46,20 @@ public class ContactsManagerApp {
         GetAllContacts.GetAllContacts();
 
         ChoicesRunner.choices();
+
+        System.out.println("Would you like to delete ");
+
+        /* DELETE DO WHILE FLAG */
+        String userChoice2;
+        userChoice2 = getUserChoice("Do you want to delete any contacts? y/n");
+
+        do {
+            ContactsList.deleteContact();
+            userChoice2 = getUserChoice("Do you want to delete any contacts? y/n");
+
+        } while(userChoice2.equalsIgnoreCase("y"));
+
+
 
     }
 }
