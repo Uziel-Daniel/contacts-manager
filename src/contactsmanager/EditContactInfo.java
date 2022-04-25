@@ -3,7 +3,7 @@ package contactsmanager;
 import java.util.HashMap;
 
 public class EditContactInfo {
-    public EditContactInfo() {
+    public static void editContactInfo() {
 
         //    gets the contacts object
         HashMap<Integer, ContactObject> contactsInfo = ContactsList.getContactsInfo();

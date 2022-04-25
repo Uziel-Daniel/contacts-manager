@@ -22,8 +22,9 @@ public class ContactsManagerApp {
 //        /////////////////////////////////////////  print all contacts
 //        call GetAllContacts to see all contacts info
         System.out.println("see all contacts");
-        GetAllContacts getAllContacts = new GetAllContacts();
+//        GetAllContacts getAllContacts = new GetAllContacts();
 
+        GetAllContacts.GetAllContacts();
 
 
 //        /////////////////////////////////////////// search by name /////////////////////////////////////
@@ -37,12 +38,11 @@ public class ContactsManagerApp {
 //        getContactsByName.GetContactsInfoByName();
 
 
-
-        EditContactInfo editContactInfo = new EditContactInfo();
+        EditContactInfo.editContactInfo();
 
 
         System.out.println("see all contacts");
-        GetAllContacts getAllContacts2 = new GetAllContacts();
+        GetAllContacts.GetAllContacts();
 
     }
 }
