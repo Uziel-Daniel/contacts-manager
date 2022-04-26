@@ -60,10 +60,5 @@ public class ChoicesRunner {
             }
 
         } while (keepRunningApp);
-
-
-
-
-
     }
 }
