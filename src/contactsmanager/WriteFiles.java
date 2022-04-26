@@ -17,12 +17,8 @@ public class WriteFiles {
         String directory = "data";
         String filename = "info.json";
 
-        // make the Path objects for the director and file
         Path dataDirectory = Paths.get(directory);
         Path dataFile = Paths.get(directory, filename);
-
-        // because Files.createDirectories and Files.createFile can throw IOException,
-        // we need to toss them into a try/catch block so it doesn't crash the program
         try{
             if (Files.notExists(dataDirectory)) {
                 Files.createDirectories(dataDirectory);
@@ -34,7 +30,6 @@ public class WriteFiles {
         }catch (IOException ex){
             System.out.println(ex.getMessage());
         }
-        // oof - null check needed!
         return null;
     }
 
