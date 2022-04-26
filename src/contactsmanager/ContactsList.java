@@ -14,6 +14,7 @@ public class ContactsList {
         contact.setName(Input.getUserName("Please enter a contact name: "));
         contact.setPhoneNumber(Input.getUserPhoneNumber("Please enter a contact phone number: "));
 
+
         int maxKey = contactsInfo.keySet().stream().max(Integer::compareTo).orElse(0);
 
         contactsInfo.put(maxKey + 1, contact);

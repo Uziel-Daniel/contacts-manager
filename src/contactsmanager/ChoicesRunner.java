@@ -30,8 +30,7 @@ public class ChoicesRunner {
                     "           \\     ........     /\n" +
                     "            \\________________/ \n"
             );
-
-            userChoice = Integer.parseInt(Input.getUserPhoneNumber("Enter an option (1, 2, 3, 4 or 5):"));
+            userChoice = Integer.parseInt(Input.getUserName("Enter an option (1, 2, 3, 4 or 5):"));
 
             if (userChoice == 1) {
                 System.out.println("Option 1: \n");
@@ -48,7 +47,7 @@ public class ChoicesRunner {
                 do {
                     ContactsList.putContacts();
 
-                    keepAdding = getUserName("Do you want to keep adding any contacts? y/n");
+                    keepAdding = getUserName("\033[0;97m Do you want to keep adding any contacts? y/n");
 
                 } while (keepAdding.equalsIgnoreCase("Y"));
 
