@@ -37,7 +37,7 @@ public class ContactsList {
             if (contactsInfo.get(key).getName().contains(findContactByName)) {
 
                 contactsInfo.remove(key);
-                System.out.println("Deleted Contact: " + findContactByName);
+                System.out.println("\u001b[32mDeleted Contact: \u001b[0m" + findContactByName);
                 return;
             }
         }
