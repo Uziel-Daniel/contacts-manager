@@ -20,7 +20,7 @@ public class Input {
 
         System.out.println(prompt);
 
-        String phoneNumber = scan.nextLine().replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3");
+        String phoneNumber = scan.nextLine().replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2 - $3");
 
         return phoneNumber;
     }

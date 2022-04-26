@@ -5,16 +5,17 @@ import java.util.HashMap;
 public class ContactsList {
 
     /* CREATE NEW HASHMAP */
-    static HashMap<Integer, ContactObject> contactsInfo = WriteFiles.tryReadFile(WriteFiles.tryMakeFileDirectory());
+    private static HashMap<Integer, ContactObject> contactsInfo = WriteFiles.tryReadFile(WriteFiles.tryMakeFileDirectory());
 
     /* ADD CONTACTS */
     public static void putContacts() {
         ContactObject contact = new ContactObject();
 
         contact.setName(Input.getUserName("Please enter a contact name: "));
-        contact.setPhoneNumber(Input.getUserName("Please enter a contact phone number: "));
+        contact.setPhoneNumber(Input.getUserPhoneNumber("Please enter a contact phone number: "));
 
         int maxKey = contactsInfo.keySet().stream().max(Integer::compareTo).orElse(0);
+
         contactsInfo.put(maxKey + 1, contact);
     }
 
