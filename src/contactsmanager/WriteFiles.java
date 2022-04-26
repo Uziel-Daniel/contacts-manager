@@ -8,7 +8,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
-import java.util.List;
 import java.util.stream.Stream;
 
 public class WriteFiles {
@@ -47,15 +46,15 @@ public class WriteFiles {
 
     }
 
-    public static List<ContactsList> tryReadFile(Path filePath){
-
-        try {
-            return Stream
-                    .of(new Gson().fromJson(Files.readAllLines(filePath).get(0), ContactsList.class))
-                    .toList();
-        }catch(IOException ex){
-            System.out.println(ex.getMessage());
-        }
-        return null;
-    }
+//    public static List<ContactsList> tryReadFile(Path filePath){
+//
+//        try {
+//            return Stream
+//                    .of(new Gson().fromJson(Files.readAllLines(filePath).get(0), ContactsList.class))
+//                    .toList();
+//        }catch(IOException ex){
+//            System.out.println(ex.getMessage());
+//        }
+//        return null;
+//    }
 }
