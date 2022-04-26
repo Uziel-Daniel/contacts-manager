@@ -25,8 +25,6 @@ public class EditContactInfo {
 
                 }
 
-            } else {
-                System.out.println("not contact found with that name");
             }
         }
 
