@@ -16,11 +16,11 @@ public class ChoicesRunner {
             );
             userChoice = Integer.parseInt(Input.getUserPhoneNumber("Enter an option (1, 2, 3, 4 or 5):"));
             if (userChoice == 1) {
-                System.out.println("chooose 1");
+                System.out.println("Option 1");
                 GetAllContacts.getAllContacts();
 
             } else if (userChoice == 2) {
-                System.out.println("choose2");
+                System.out.println("Option 2");
                 /* DO WHILE FLAG */
                 String keepAdding = Input.getUserName("Do you want to add any contacts? y/n");
 

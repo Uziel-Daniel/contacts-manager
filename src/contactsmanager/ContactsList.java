@@ -8,7 +8,6 @@ public class ContactsList {
     static HashMap<Integer, ContactObject> contactsInfo = new HashMap<>();
 
 
-
     public static void putContacts() {
         ContactObject contact = new ContactObject();
 
