@@ -10,7 +10,7 @@ public class Input {
     /* GET DYNAMIC USER NAME */
     public static String getUserName(String prompt) {
 
-        System.out.println(prompt);
+        System.out.print(prompt);
 
         return scan.nextLine();
     }
