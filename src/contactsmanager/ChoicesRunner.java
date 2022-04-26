@@ -60,8 +60,13 @@ public class ChoicesRunner {
                 System.out.println("Option 3: \n");
 
                 System.out.println("- Searching for a contact by name -");
+                boolean foundUser = GetContactsByName.getContactsInfoByName();
 
-                GetContactsByName.getContactsInfoByName();
+                if (foundUser) {
+                    System.out.println(GetContactsByName.getContactsInfoByName());
+                } else {
+                    System.out.println("no contact was found");
+                }
 
 
             } else if (userChoice == 5) {
@@ -74,17 +79,17 @@ public class ChoicesRunner {
                     ContactsList.deleteContact();
                     deleteContact = getUserChoice("Are you sure you want to select a contact to delete? y/n");
 
-                } while(deleteContact.equalsIgnoreCase("y"));
+                } while (deleteContact.equalsIgnoreCase("y"));
 
             } else if (userChoice == 6) {
                 System.out.println("Option 5, Exiting the Program...");
 
             }
 
-            if (Input.getUserName("Do you want to continue using the app? y/n: ").equalsIgnoreCase("y")){
+            if (Input.getUserName("Do you want to continue using the app? y/n: ").equalsIgnoreCase("y")) {
                 keepRunningApp = true;
 
-            } else{
+            } else {
                 keepRunningApp = false;
             }
 
