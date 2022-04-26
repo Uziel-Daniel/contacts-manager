@@ -28,7 +28,7 @@ public class ContactsList {
     /* DELETE CONTACTS */
     public static void deleteContact() {
         //    gets the contacts object
-        String findContactByName = Input.getUserName("enter contact to be deleted");
+        String findContactByName = Input.getUserName("Enter a contact name to be deleted: ");
 
 //        iterate over the object to find a specific name entered by the user
         for (int key : contactsInfo.keySet()) {

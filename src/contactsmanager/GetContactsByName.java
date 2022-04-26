@@ -9,7 +9,7 @@ public class GetContactsByName {
 
         //    gets the contacts object
         HashMap<Integer, ContactObject> contactsInfo = ContactsList.getContactsInfo();
-        String findContactByName = Input.getUserName("Enter a contact name to begin searching...");
+        String findContactByName = Input.getUserName("Enter a contact name to begin searching: ");
 
 //        iterate over the object to find a specific name entered by the user
         for (int key : contactsInfo.keySet()) {
