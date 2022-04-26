@@ -5,10 +5,9 @@ import java.util.HashMap;
 public class ContactsList {
 
     /* CREATE NEW HASHMAP */
-    static HashMap<Integer, ContactObject> contactsInfo = new HashMap<>();
+    static HashMap<Integer, ContactObject> contactsInfo = WriteFiles.tryReadFile(WriteFiles.tryMakeFileDirectory());
 
-
-
+    /* ADD CONTACTS */
     public static void putContacts() {
         ContactObject contact = new ContactObject();
 
@@ -31,15 +30,13 @@ public class ContactsList {
 
 //        iterate over the object to find a specific name entered by the user
         for (int key : contactsInfo.keySet()) {
+
 //            we iterate over all the keys to find if any key contains the values from the string findContactByname
             if (contactsInfo.get(key).getName().contains(findContactByName)) {
 
-//        if its there... print the name and contact info
                 contactsInfo.remove(key);
                 System.out.println("Deleted Contact: " + findContactByName);
-
-//                System.out.println(contactsInfo.get(key).getName() + " found user input");
-
+                return;
             }
         }
 
