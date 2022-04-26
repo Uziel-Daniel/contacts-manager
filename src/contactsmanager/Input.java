@@ -21,8 +21,13 @@ public class Input {
         System.out.println(prompt);
 
         String phoneNumber = scan.nextLine().replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3");
-
-        return phoneNumber;
+        if (phoneNumber.length() == 14)
+            return phoneNumber;
+        else {
+            System.out.println(phoneNumber);
+            System.out.println(phoneNumber.length());
+           return  getUserPhoneNumber("\033[1;31m please enter a number that is 10 digits without special characters");
+        }
     }
 
     /* GET DYNAMIC USER NAME */

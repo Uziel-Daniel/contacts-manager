@@ -8,7 +8,8 @@ public class ContactObject {
 
     public ContactObject(String name, String phoneNumber) {
         this.name = name;
-        this.phoneNumber = phoneNumber;
+        this.phoneNumber = phoneNumber.replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3");
+        ;
     }
 
     public String getName() {

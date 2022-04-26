@@ -12,7 +12,7 @@ public class ContactsList {
         ContactObject contact = new ContactObject();
 
         contact.setName(Input.getUserName("Please enter a contact name: "));
-        contact.setPhoneNumber(Input.getUserName("Please enter a contact phone number: "));
+        contact.setPhoneNumber(Input.getUserPhoneNumber("Please enter a contact phone number: ").replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3"));
 
         int maxKey = contactsInfo.keySet().stream().max(Integer::compareTo).orElse(0);
         contactsInfo.put(maxKey + 1, contact);

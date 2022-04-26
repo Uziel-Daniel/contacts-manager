@@ -14,7 +14,7 @@ public class ChoicesRunner {
                     "3. Search a Contact by Name \n 4. Delete an Existing Contact \n" +
                     " 5. Exit \n 6. Edit contact "
             );
-            userChoice = Integer.parseInt(Input.getUserPhoneNumber("Enter an option (1, 2, 3, 4 or 5):"));
+            userChoice = Integer.parseInt(Input.getUserName("Enter an option (1, 2, 3, 4 or 5):"));
             if (userChoice == 1) {
                 System.out.println("Option 1");
                 GetAllContacts.getAllContacts();
@@ -28,7 +28,7 @@ public class ChoicesRunner {
                 do {
                     ContactsList.putContacts();
 
-                    keepAdding = getUserName("Do you want to keep adding any contacts? y/n");
+                    keepAdding = getUserName("\033[0;97m Do you want to keep adding any contacts? y/n");
 
                 } while (keepAdding.equalsIgnoreCase("Y"));
             } else if (userChoice == 3) {
