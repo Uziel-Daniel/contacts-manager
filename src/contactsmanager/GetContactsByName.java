@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class GetContactsByName {
 
 
-    public static boolean getContactsInfoByName() {
+    public static String getContactsInfoByName() {
 
         //    gets the contacts object
         HashMap<Integer, ContactObject> contactsInfo = ContactsList.getContactsInfo();
@@ -17,14 +17,13 @@ public class GetContactsByName {
             if (contactsInfo.get(key).getName().contains(findContactByName)) {
 
 //        if its there... print the name and contact info
-                System.out.println("Found user: " + contactsInfo.get(key).getName() + " at ID #" + key);
-                return true;
-
+                System.out.println("Found user: " + contactsInfo.get(key).getName() + "," + " Phone #: " + contactsInfo.get(key).getPhoneNumber() + "," +" ID #:" + key);
+                return "found contact";
 //                We can't use an else statement because as the iteration is ocurring, it will go through the else statement
 //                We can exit the method, print out an statement to look again and from there decide whether or not call the method again
             }
         }
-        return false;
+        return "false";
     }
 }
 
