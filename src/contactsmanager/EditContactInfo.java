@@ -7,7 +7,7 @@ public class EditContactInfo {
 
         //    gets the contacts object
         HashMap<Integer, ContactObject> contactsInfo = ContactsList.getContactsInfo();
-        String findContactByName = Input.getUserName("enter contact to be edited");
+        String findContactByName = Input.getUserName("Enter a contact name to edit the entry: ");
 
 //        iterate over the object to find a specific name entered by the user
         for (int key : contactsInfo.keySet()) {
@@ -15,9 +15,9 @@ public class EditContactInfo {
             if (contactsInfo.get(key).getName().contains(findContactByName)) {
 
 //        if its there... print the name and contact info
-                contactsInfo.get(key).setName(Input.getUserName("enter new name"));
+                contactsInfo.get(key).setName(Input.getUserName("Please enter a new name: "));
 
-                System.out.println("edit successful");
+                System.out.println("\u001b[32m- Edit Successful -\u001b[0m");
 
                 if (Input.getUserName("would you like to edit the phone number as well? y/n").equalsIgnoreCase("y")) {
 
@@ -25,8 +25,6 @@ public class EditContactInfo {
 
                 }
 
-            } else {
-                System.out.println("not contact found with that name");
             }
         }
 
