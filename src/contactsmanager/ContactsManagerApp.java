@@ -9,6 +9,6 @@ public class ContactsManagerApp {
         ChoicesRunner.choices();
         WriteFiles.writeFiles(WriteFiles.tryMakeFileDirectory(), ContactsList.getContactsInfo());
 
-        System.out.println(WriteFiles.tryReadFile(WriteFiles.tryMakeFileDirectory()));
+//        System.out.println(WriteFiles.tryReadFile(WriteFiles.tryMakeFileDirectory()));
     }
 }
