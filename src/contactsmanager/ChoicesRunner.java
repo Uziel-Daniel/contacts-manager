@@ -16,9 +16,9 @@ public class ChoicesRunner {
                     "       _/      ____________      \\_\n" +
                     "     _/____________    ____________\\_\n" +
                     "    /  ___________ \\  / ___________  \\" + " " + "      ------------------------------------" + "\n" +
-                    "   /  /XXXXXXXXXXX\\ \\/ /XXXXXXXXXXX\\  \\" + " " + "     |  1. View Contacts                |" + "\n" +
-                    "  /  /############/    \\############\\  \\" + " " + "    |  2. Add New Contact              |" + "\n" +
-                    "  |  \\XXXXXXXXXXX/ _  _ \\XXXXXXXXXXX/  |" + " " + "    |  3. Search a Contact by Name     |" + "\n" +
+                    "   /  \033[1;31m/XXXXXXXXXXX\\    /XXXXXXXXXXX\\ \033[0;97m  \\" + " " + "     |  1. View Contacts                |" + "\n" +
+                    "  /  \033[1;31m/############/    \\############\\ \033[0;97m \\" + " " + "    |  2. Add New Contact              |" + "\n" +
+                    "  |  \033[1;31m\\XXXXXXXXXXX/ _  _ \\XXXXXXXXXXX/ \033[0;97m  |" + " " + "    |  3. Search a Contact by Name     |" + "\n" +
                     "__|\\_____   ___   //  \\\\   ___   _____/|__" + " " + "  |  4. Delete an Existing Contact   |" + "\n" +
                     "[_       \\     \\  X    X  /     /       _]" + " " + "  |  5. Exit                         |" + "\n" +
                     "__|     \\ \\                    / /     |__" + " " + "  |  6. Edit contact                 |" + "\n" +
