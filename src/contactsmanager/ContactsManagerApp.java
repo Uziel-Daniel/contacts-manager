@@ -1,13 +1,14 @@
 package contactsmanager;
 
-import static contactsmanager.Input.getUserChoice;
-import static contactsmanager.Input.getUserName;
-
 public class ContactsManagerApp {
 
     public static void main(String[] args) {
 
-        ChoicesRunner.choices();
+        System.out.println(WriteFiles.tryMakeFileDirectory());
 
+        ChoicesRunner.choices();
+        WriteFiles.writeFiles(WriteFiles.tryMakeFileDirectory(), ContactsList.getContactsInfo());
+
+        System.out.println(WriteFiles.tryReadFile(WriteFiles.tryMakeFileDirectory()));
     }
 }

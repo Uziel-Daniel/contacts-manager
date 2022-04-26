@@ -53,6 +53,11 @@ public class ChoicesRunner {
                 EditContactInfo.editContactInfo();
 
             }
+            if (Input.getUserName("do you want to keep using the app?").equalsIgnoreCase("y")){
+                keepRunningApp = true;
+            } else{
+                keepRunningApp = false;
+            }
 
         } while (keepRunningApp);
 
