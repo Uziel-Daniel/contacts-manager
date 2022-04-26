@@ -30,7 +30,7 @@ public class ChoicesRunner {
                     "           \\     ........     /\n" +
                     "            \\________________/ \n"
             );
-            userChoice = Integer.parseInt(Input.getUserName("\033[0;97m Enter an option (1, 2, 3, 4 or 5): "));
+            userChoice = Integer.parseInt(Input.getUserName("\033[0;97mEnter an option (1, 2, 3, 4 or 5): "));
 
             if (userChoice == 1) {
                 System.out.println("Option 1: \n");
@@ -41,31 +41,31 @@ public class ChoicesRunner {
                 System.out.println("Option 2: \n");
 
                 /* DO WHILE FLAG */
-                String keepAdding = Input.getUserName("Do you want to add any contacts? y/n");
+                String keepAdding = Input.getUserName("Do you want to add any contacts? y/n: ");
 
                 /* INITIALIZING CONTACT HASHMAP POPULATING */
                 do {
                     ContactsList.putContacts();
 
-                    keepAdding = getUserName("\033[0;97m Do you want to keep adding any contacts? y/n: ");
+                    keepAdding = getUserName("\033[0;97mDo you want to keep adding any contacts? y/n: ");
 
                 } while (keepAdding.equalsIgnoreCase("Y"));
 
             } else if (userChoice == 3) {
-                System.out.println("Option 6: \n");
+                System.out.println("Option 3: \n");
                 EditContactInfo.editContactInfo();
 
 
             } else if (userChoice == 4) {
-                System.out.println("Option 3: \n");
+                System.out.println("Option 4: \n");
 
-                System.out.println("- Searching for a contact by name -");
+                System.out.println("\u001b[32m- Searching for a contact by name -\u001b[0m");
 
                 GetContactsByName.getContactsInfoByName();
 
 
             } else if (userChoice == 5) {
-                System.out.println("Option 4: \n");
+                System.out.println("Option 5: \n");
 
                 /* DELETE DO WHILE FLAG */
                 String deleteContact = getUserChoice("Do you want to delete any contacts? y/n");
