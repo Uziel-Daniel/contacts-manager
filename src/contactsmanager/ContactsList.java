@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class ContactsList {
 
     /* CREATE NEW HASHMAP */
-    static HashMap<Integer, ContactObject> contactsInfo = new HashMap<>();
+    static HashMap<Integer, ContactObject> contactsInfo = WriteFiles.tryReadFile(WriteFiles.tryMakeFileDirectory());
 
     /* ADD CONTACTS */
     public static void putContacts() {
